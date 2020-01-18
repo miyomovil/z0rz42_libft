@@ -6,7 +6,7 @@
 /*   By: antomart <antomart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/07 13:33:29 by antomart          #+#    #+#             */
-/*   Updated: 2020/01/18 14:58:43 by antomart         ###   ########.fr       */
+/*   Updated: 2020/01/18 16:54:04 by antomart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ int				ft_isspace(int c);
 int				ft_isprint(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
+int				ft_negsign(int c);
+int				ft_possign(int c);
 int				ft_atoi(const char *str);
 void			*ft_calloc(size_t count, size_t size);
 size_t			ft_wordcount(const char *s, char c);

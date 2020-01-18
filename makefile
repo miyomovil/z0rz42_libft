@@ -6,7 +6,7 @@
 #    By: antomart <antomart@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/11 09:57:05 by antomart          #+#    #+#              #
-#    Updated: 2020/01/18 14:54:26 by antomart         ###   ########.fr        #
+#    Updated: 2020/01/18 16:54:08 by antomart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,8 @@ SRC = ft_atoi.c \
 		ft_wordlen.c \
 		ft_wordcount.c \
 		ft_memdel.c \
+		ft_negsign.c \
+		ft_possign.c \
 		
 
 BONUS	= ft_lstnew.c \
