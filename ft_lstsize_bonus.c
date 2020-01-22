@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antomart <antomart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/14 14:28:50 by antomart          #+#    #+#             */
-/*   Updated: 2020/01/20 16:02:41 by antomart         ###   ########.fr       */
+/*   Created: 2020/01/17 13:45:25 by antomart          #+#    #+#             */
+/*   Updated: 2020/01/17 15:17:57 by antomart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_split(char const *s, char c)
+int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
-	size_t	j;
-	size_t	k;
-	char	**w;
+	int				i;
 
 	i = 0;
-	k = 0;
-	if (!s || !(w = malloc(sizeof(char *) * (ft_wordcount(s, c) + 1))))
-		return (NULL);
-	while (i < ft_wordcount(s, c))
+	while (lst)
 	{
-		if (!(w[i] = malloc(sizeof(char) * (ft_wordlen(&s[k], c) + 1))))
-			return (NULL);
-		j = 0;
-		while (s[k] == c)
-			k = k + 1;
-		while (s[k] != c && s[k])
-			w[i][j++] = s[k++];
-		w[i][j] = '\0';
-		i += 1;
+		lst = lst->next;
+		i++;
 	}
-	w[i] = NULL;
-	return (w);
+	return (i);
 }

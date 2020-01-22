@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antomart <antomart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/14 10:47:48 by antomart          #+#    #+#             */
-/*   Updated: 2020/01/21 09:45:47 by antomart         ###   ########.fr       */
+/*   Created: 2020/01/18 09:20:49 by antomart          #+#    #+#             */
+/*   Updated: 2020/01/18 11:51:35 by antomart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	char	*res;
-	size_t	i;
-
-	i = 0;
-	if (s == NULL || ft_strlen(s) < start)
-		return (ft_strdup(""));
-	if ((res = ft_strnew(len)) == 0)
-		return (NULL);
-	while (i < len)
+	if (lst)
 	{
-		res[i] = s[start + i];
-		i++;
+		if (*lst != NULL)
+			ft_lstlast(*lst)->next = new;
+		else
+			*lst = new;
 	}
-	res[i] = '\0';
-	return (res);
 }

@@ -6,7 +6,7 @@
 /*   By: antomart <antomart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/18 12:13:09 by antomart          #+#    #+#             */
-/*   Updated: 2020/01/18 12:18:44 by antomart         ###   ########.fr       */
+/*   Updated: 2020/01/20 14:19:34 by antomart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_memdel(void **ap)
 {
-	if (ap != NULL)
+	if (ap != '\0')
 	{
 		free(*ap);
 		*ap = NULL;

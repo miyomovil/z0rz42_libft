@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antomart <antomart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/14 10:47:48 by antomart          #+#    #+#             */
-/*   Updated: 2020/01/21 09:45:47 by antomart         ###   ########.fr       */
+/*   Created: 2020/01/17 15:39:14 by antomart          #+#    #+#             */
+/*   Updated: 2020/01/20 14:15:50 by antomart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstlast(t_list *lst)
 {
-	char	*res;
-	size_t	i;
-
-	i = 0;
-	if (s == NULL || ft_strlen(s) < start)
-		return (ft_strdup(""));
-	if ((res = ft_strnew(len)) == 0)
-		return (NULL);
-	while (i < len)
-	{
-		res[i] = s[start + i];
-		i++;
-	}
-	res[i] = '\0';
-	return (res);
+	while (lst->next != '\0')
+		lst = lst->next;
+	return (lst);
 }
